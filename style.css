@@ -1,100 +1,135 @@
-body{
-  background-color: antiquewhite;
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-  .main{
-    height:100vh;
-    width:90vw;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-     margin-left: 90px; 
-   background-attachment:fixed;
-   position:fixed;
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.main {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Left Section */
+#left {
+  flex: 1;
+  background: #4B0082; /* Purple */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  min-width: 300px;
+}
+
+#left h2 {
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+#total, #percentage, #Grade {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#mm {
+  margin-top: 20px;
+}
+
+#pass, #fail {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+/* Right Section */
+#right {
+  flex: 1;
+  background: #9ACD32; /* Yellow-green */
+  padding: 20px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#right h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+input[type="tel"] {
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: plum;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 20px auto;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 50%;
+}
+
+button:hover {
+  background-color: lightblue;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+      flex-direction: column;
   }
-  .card{
-      height:400px;
-      width:60%;
-      display:flex;
-      margin-top: 90px;
-      border-radius: 50px;
+
+  #left, #right {
+      min-width: 100%;
+      padding: 20px;
   }
-  #left{
-      width:35%;
-      height:90%;
-      background-color: purple;
-      border-top-left-radius: 30px;
-      border-bottom-left-radius: 30px;
-      background-attachment: fixed;
-      background-position:fixed ; 
+
+  input[type="tel"], button {
+      width: 100%;
   }
-  #right{
-      width:50%;
-      height:360px;
-      background-color: greenyellow;
-      border-top-right-radius: 30px;
-      border-bottom-right-radius: 30px;
-      padding-left: 30px;
+}
+
+@media (max-width: 480px) {
+  #left h2, #right h2 {
+      font-size: 1.2rem;
   }
-  #marks{
-      margin-left: 40px;
-      height:23px;
-      border:1px solid black;
+
+  input[type="tel"] {
+      font-size: 0.9rem;
+      padding: 8px;
   }
-  button{
-      margin-left: 150px;
-      width:150px;
-      height:30px;
-      border-radius: 15px;
-      border:1px solid black;
-      background-color: plum;
-      position: relative;
-      bottom:19px;
+
+  button {
+      padding: 8px 15px;
+      font-size: 0.9rem;
   }
-  #head1{
-    padding-left: 30px;
-  }
-  #total{
-    padding-left: 30px;
-    position: relative;
-    bottom:10px;
-  }
-  #head2{
-    padding-left: 30px;
-  }
-  #percentage{
-    padding-left: 30px;
-    position: relative;
-    bottom:10px;
-  }
-  #head3{
-    padding-left: 30px;
-  }
-  #Grade{
-    padding-left: 30px;
-    position: relative;
-    bottom:10px;
-  }
-  /* #mm{
-    width:288px;
-    height:40px;
-    background-color:rgb(51, 26, 51);
-    border-bottom-left-radius: 30px;
-     background-attachment:fixed;
-    position:fixed;
-    top:540px; */
-  /* }  */
-  #pass{
-    text-align: center;
-    font-size: 20px;
-    color:white;
-    padding-top: 3px;
-  }
-  #fail{
-    text-align: center;
-    font-size: 20px;
-    color:white;
-    padding-top: 3px;
-  }
-  
-  
-  
+}
